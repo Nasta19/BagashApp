@@ -17,7 +17,7 @@
       <h1>BagashApp</h1>
       <div class="switcher">
         <img src="img/Button.svg" alt="button" />
-        <div>
+        <div class="uyArg">
           <p>Uy</p>
           <p>Arg</p>
         </div>
@@ -26,20 +26,26 @@
     <section>
       <div class="operation">
         <label for="argSwitch">Ingrese el monto en ARG a convertir</label
-        ><input type="number" name="argSwitch" />
+        ><input type="number" id = "argSwitch" name="argSwitch" />
         <label for="dollarBuy">Ingrese a cuánto compró el dólar</label
-        ><input type="number" name="dollarBuy" />
+        ><input type="number" id = "dollarBuy" name="dollarBuy" />
         <label for="dollarSell">Ingrese a cuánto vendió el dólar</label
-        ><input type="number" name="dollarSell" />
+        ><input type="number" id = "dollarSell" name="dollarSell" />
       </div>
       <div class="result">
         <label for="result">Resultado</label
-        ><input type="number" name="result" />
+        ><input type="number" id = "result" name="result" />
       </div>
       <div class="convert">
-        <input type="submit" name="submit" />
+        <input type="submit" name="submit" value="Convertir"/>
       </div>
-      <div class="history"></div>
+      <div class="history">
+        <p>Historial</p>
+        <span></span>
+      </div>
+      <div class="text">
+        <p>BagashApp es una app web hecha para agilizar las compras en Argentina y comparar rápidamente los precios de forma precisa.</p>
+      </div>
     </section>
   </body>
 </html>
