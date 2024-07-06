@@ -60,6 +60,7 @@
         border-right: none;
         border-left: none;
         border-bottom: 1px solid #434348;
+        color: white;
     }
 
     .convert {
@@ -67,7 +68,7 @@
         justify-content: center;
     }
 
-    .convert input {
+    .convert button {
         padding: 13px 120px 13px 120px;
         border-radius: 10px;
         background-color: #0066FF;
@@ -75,11 +76,15 @@
         color: white;
     }
 
-    .history p {
-        padding: 30px 0px 10px 30px;
+    .history {
+        padding: 30px 0px 40px 30px;
     }
 
     .text p {
         text-align: center;
+    }
+
+    #result {
+        color: white;
     }
 }
