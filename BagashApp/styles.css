@@ -16,17 +16,18 @@
 
     header {
         display: flex;
+        flex-direction: row;
     }
 
     .switcher {
         display: flex;
         flex-direction: column;
         align-items: center;
-        padding: 60px 10px 0px 150px;
+        margin-left: 70px;
     }
 
     .switcher img {
-        width: 40px;
+        width: 35px;
         justify-content: center;
     }
 
@@ -39,7 +40,6 @@
     header h1 {
         color: white;
         padding-left: 5%;
-        padding-top: 5%;
     }
 
     section {
@@ -87,4 +87,89 @@
     #result {
         color: white;
     }
+}
+
+body {
+    background-color: #151620;
+}
+
+body p, label {
+    color: #A2A2A7;
+    margin-bottom: 10px;
+}
+
+header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.switcher {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 50px 50px 0px 0px;
+}
+
+.switcher img {
+    width: 40px;
+    justify-content: center;
+}
+
+.uyArg {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+}
+
+header h1 {
+    color: white;
+    padding-left: 5%;
+}
+
+section {
+    display: flex;
+    flex-direction: column;
+}
+
+.operation, .result {
+    display: flex;
+    flex-direction: column;
+    padding: 10px 30px 30px 30px;
+    gap: 10px;
+}
+
+.operation input, .result input {
+    background-color: #151620;
+    border-top: none;
+    border-right: none;
+    border-left: none;
+    border-bottom: 1px solid #434348;
+    color: white;
+}
+
+.convert {
+    display: flex;
+    justify-content: center;
+}
+
+.convert button {
+    padding: 13px 120px 13px 120px;
+    border-radius: 10px;
+    background-color: #0066FF;
+    border: none;
+    color: white;
+}
+
+.history {
+    padding: 30px 0px 40px 30px;
+}
+
+.text p {
+    text-align: center;
+}
+
+#result {
+    color: white;
 }

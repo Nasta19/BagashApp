@@ -80,8 +80,62 @@ document.addEventListener("DOMContentLoaded", function() {
                     resultDiv.textContent = "La cantidad " + amountValue + " UYU son " + result.toFixed(2) + " ARG";
                 }
             }
+
+            //Save jSon to LocalStorage
+            const conversion = {
+                amount: amountValue,
+                dollarBuy: dollarBuyValue,
+                dollarSell: dollarSellValue,
+                result: result.toFixed(2),
+                isArgToUy: isArgToUy,
+                isBuying: isBuyingInUruguay,
+                timestamp: new Date().toLocaleString()
+            };
+
+            let history = JSON.parse(localStorage.getItem("conversionHistory")) || [];
+            history.push(conversion);
+            localStorage.setItem("conversionHistory", JSON.stringify(history));
+
+            displayHistory();
+
         } else {
             alert("Por favor, ingrese valores válidos.");
         }
     });
+
+    //Display history
+    
+    function displayHistory() {
+        const historyContainer = document.querySelector(".history");
+        const history = JSON.parse(localStorage.getItem("conversionHistory")) || [];
+        historyContainer.innerHTML = "<p>Historial</p><p style='font-style: italic'>Aquí podras visualizar tu historial de conversiones</p>";
+
+        //Inside the local Storage
+        history.forEach((entry, index) => {
+            let historyEntry = document.createElement("p");
+            historyEntry.textContent = `${entry.timestamp}: ${entry.amount} ${entry.isArgToUy ? 'ARG' : 'UYU'} = ${entry.result} ${entry.isArgToUy ? 'UYU' : 'ARG'} (Dólar Compra: ${entry.dollarBuy}, Dólar Venta: ${entry.dollarSell})`;
+
+            let deleteIcon = document.createElement("img");
+            deleteIcon.setAttribute("src", "img/delete-symbol_3448953.png");
+            deleteIcon.setAttribute("alt", "Delete icon");
+            deleteIcon.style.width = "25px";
+            deleteIcon.style.cursor = "pointer";
+            deleteIcon.style.verticalAlign = "middle";
+
+            //Delete entry function
+            deleteIcon.addEventListener("click", function () {
+                deleteEntry = confirm("¿Estas seguro de eliminar la entrada?")
+                if (deleteEntry) {
+                    history.splice(index, 1);
+                    localStorage.setItem("conversionHistory", JSON.stringify(history));
+                    displayHistory();
+                }
+            })
+
+            historyContainer.appendChild(historyEntry);
+            historyEntry.appendChild(deleteIcon);
+        });
+    }
+    //Initial display
+    displayHistory();
 });
