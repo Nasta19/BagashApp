@@ -32,9 +32,19 @@ document.addEventListener("DOMContentLoaded", function() {
     });
 
     // Toggle buying in Uruguay
-    uruguayanShopping.addEventListener("click", function () {
-        isBuyingInUruguay = !isBuyingInUruguay;
+    const savedState = localStorage.getItem("isBuyingInUruguay");
+    if (savedState !== null) {
+        isBuyingInUruguay = JSON.parse(savedState);
         updateTextSwitch();
+    }
+
+    uruguayanShopping.addEventListener("click", function () {
+        // Actualizar el estado y guardarlo en localStorage
+        isBuyingInUruguay = !isBuyingInUruguay;
+        localStorage.setItem("isBuyingInUruguay", JSON.stringify(isBuyingInUruguay));
+
+        // Recargar la página
+        location.reload();
     });
 
     function updateTextSwitch() {
@@ -46,7 +56,8 @@ document.addEventListener("DOMContentLoaded", function() {
         const toggleShopping = document.querySelector("#toggleShopping");
         toggleShopping.addEventListener("click", function () {
             isBuyingInUruguay = !isBuyingInUruguay;
-            updateTextSwitch();
+            localStorage.setItem("isBuyingInUruguay", JSON.stringify(isBuyingInUruguay));
+            location.reload();
         });
     }
 
