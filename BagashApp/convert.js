@@ -32,6 +32,7 @@ document.addEventListener("DOMContentLoaded", function() {
     });
 
     // Toggle buying in Uruguay
+    // Save boolean in Local Storage to then reload
     const savedState = localStorage.getItem("isBuyingInUruguay");
     if (savedState !== null) {
         isBuyingInUruguay = JSON.parse(savedState);
@@ -39,11 +40,10 @@ document.addEventListener("DOMContentLoaded", function() {
     }
 
     uruguayanShopping.addEventListener("click", function () {
-        // Actualizar el estado y guardarlo en localStorage
+        // Update State and save it in the Local Storage
         isBuyingInUruguay = !isBuyingInUruguay;
         localStorage.setItem("isBuyingInUruguay", JSON.stringify(isBuyingInUruguay));
 
-        // Recargar la página
         location.reload();
     });
 
