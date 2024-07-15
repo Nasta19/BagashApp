@@ -95,9 +95,10 @@ section {
 }
 
 .history {
+    text-align: center;
     padding: 10px 0 40px 0px;
     overflow: auto;
-    max-height: 110px;
+    max-height: 600px;
 }
 
 ::-webkit-scrollbar {
@@ -208,9 +209,10 @@ section {
     }
 
     .history {
+        text-align: center;
         padding: 10px 0 40px 0px;
         overflow: auto;
-        max-height: 110px;
+        max-height: 400px;
     }
 
     ::-webkit-scrollbar {
