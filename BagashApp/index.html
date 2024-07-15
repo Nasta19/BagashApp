@@ -15,7 +15,10 @@
 </head>
 <body>
 <header>
-  <h1>BagashApp</h1>
+  <div class="logo">
+    <h1>BagashApp</h1>
+    <h5>Guarda tus compras rápido</h5>
+  </div>
   <div class="switcher" id="switcher">
     <svg xmlns="http://www.w3.org/2000/svg" id="switcherArg" class="icon icon-tabler icon-tabler-toggle-left" width="56" height="56" viewBox="0 0 24 24" stroke-width="1.5" stroke="#ffffff" fill="none" stroke-linecap="round" stroke-linejoin="round">
       <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
@@ -34,6 +37,11 @@
   </div>
 </header>
 <section>
+  <div class="text">
+    <p>
+      Para obtener un resultado exacto, se necesita conocer a cuánto compró el dólar en su moneda y a cuánto lo vendió en la moneda del país que hará las compras.
+    </p>
+  </div>
   <div class="operation">
     <label for="amount" id="amountLabel">Ingrese el monto en ARG a convertir</label>
     <input type="number" id="amount" name="amount" />
@@ -53,14 +61,11 @@
     <p>Historial</p>
     <p style="font-style: italic">Aquí podras visualizar tu historial de conversiones</p>
   </div>
-  <div class="text">
-    <p>
-      BagashApp es una app web desarrollada para agilizar las compras en Argentina y
-      comparar rápidamente los precios de forma precisa.
-      Para obtener un resultado exacto, se necesita conocer a cuánto compró el dólar y a cuánto lo vendió.
-    </p>
+  <div class="text2">
+    <p >BagashApp es una app web desarrollada para agilizar las compras en Argentina y
+        comparar rápidamente los precios de forma precisa.</p>
     <p id="textSwitch">
-      Si eres de Argentina y deseas comprar en Uruguay <i style="font-style: italic; cursor: pointer;" id="toggleShopping">presiona aquí.</i>
+        Si eres de Argentina y deseas comprar en Uruguay <i style="font-style: italic; cursor: pointer;" id="toggleShopping">presiona aquí.</i>
     </p>
   </div>
 </section>

@@ -19,6 +19,19 @@ header {
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
+    padding-bottom: 40px;
+}
+
+.logo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: white;
+    padding-left: 5%;
+}
+
+.logo h1 {
+    margin-bottom: -20px;
 }
 
 .switcher {
@@ -34,9 +47,10 @@ header {
 }
 
 .uyArg {
+    margin-top: -25px;
     display: flex;
     flex-direction: row;
-    gap: 1rem;
+    gap: 15px;
 }
 
 header h1 {
@@ -81,9 +95,9 @@ section {
 }
 
 .history {
-    padding: 0 0 100px 30px;
-    max-height: 150px;
+    padding: 10px 0 40px 0px;
     overflow: auto;
+    max-height: 110px;
 }
 
 ::-webkit-scrollbar {
@@ -99,7 +113,12 @@ section {
 
 .text p {
     text-align: center;
-    padding-top: 40px;
+    margin: -15px 0 15px 0;
+}
+
+.text2 p {
+    text-align: center;
+    margin: 10px 0 10px 0;
 }
 
 #result {
@@ -119,15 +138,27 @@ section {
     header {
         display: flex;
         flex-direction: row;
-        padding-bottom: 30px;
+        justify-content: space-between;
+        gap: 2rem;
     }
 
-    .switcher {
-        margin-top: -10px;
+    .logo {
         display: flex;
         flex-direction: column;
         align-items: center;
-        margin-left: 70px;
+        color: white;
+        padding-left: 5%;
+    }
+
+    .logo h1 {
+        margin-bottom: -20px;
+    }
+
+    .switcher {
+        margin-top: -35px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
     }
 
     .switcher img {
@@ -136,15 +167,10 @@ section {
     }
 
     .uyArg {
-        margin-top: -15px;
+        margin-top: -25px;
         display: flex;
         flex-direction: row;
         gap: 15px;
-    }
-
-    header h1 {
-        color: white;
-        padding-left: 5%;
     }
 
     section {
@@ -182,7 +208,7 @@ section {
     }
 
     .history {
-        padding: 0 0 40px 30px;
+        padding: 10px 0 40px 0px;
         overflow: auto;
         max-height: 110px;
     }
@@ -197,8 +223,14 @@ section {
         background-color: #434348;
         border-radius: 10px;
     }
-    .text p {
+    .text p{
         text-align: center;
+        margin: -15px 0 15px 0;
+    }
+
+    .text2 p {
+        text-align: center;
+        margin: 10px 0 10px 0;
     }
 
     #result {
