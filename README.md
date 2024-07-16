@@ -55,15 +55,5 @@ BagashApp is a web application developed to facilitate cross-border shopping bet
    - The application uses responsive design principles to ensure usability on various devices.
    - CSS media queries and flexible layout techniques are used to adapt the interface for different screen sizes.
 
-### Future Improvements
-
-1. **Real-Time Exchange Rates**:
-   - Integrate an API to fetch real-time exchange rates for more accurate conversions.
-   
-2. **User Authentication**:
-   - Implement user authentication to save conversion history in a cloud database, allowing users to access their data from any device.
-
-3. **Enhanced UI/UX**:
-   - Improve the visual design and user experience with advanced CSS techniques and animations.
 
 BagashApp aims to be a reliable tool for anyone needing quick and accurate currency conversions between Argentine Pesos and Uruguayan Pesos. Whether you're shopping locally or planning a trip, BagashApp has you covered.
