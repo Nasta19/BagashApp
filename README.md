@@ -2,7 +2,7 @@
 #### Video Demo:  <URL HERE>
 #### Description:
 
-BagashApp is a web application developed to facilitate cross-border shopping between Argentina and Uruguay. It allows users to quickly convert prices between Argentine Pesos (ARG) and Uruguayan Pesos (UYU) based on the current exchange rates. The main goal is to help users compare prices accurately and make informed purchasing decisions.
+BagashApp is a web application developed to facilitate cross-border shopping between Argentina and Uruguay. It allows users to quickly convert prices between Argentine Pesos (ARG) and Uruguayan Pesos (UYU) based on the actual dollar exchange rates they buy/sell. The main goal is to help users compare prices accurately and make informed purchasing decisions.
 
 ### Features
 
